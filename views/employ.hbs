@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Firebase App is always required and must be first -->
+        <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-app.js"></script>
+        
+        <!-- Add additional services that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-firestore.js"></script>
+        
+        <script src="js/oauth.js"></script>
+        
         <!-- By Cezary Lopacinski: https://www.iconfinder.com/icons/1159630/shovel_spade_icon -->
         <link rel="icon" href="imgs/icons/shovel.png">
         <title>Zinc - Employ</title>
         
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/oauth.css">
     </head>
     <body>
         {{> navBar active='employ'}}
