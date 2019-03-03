@@ -13,6 +13,7 @@
     margin: 0 15%;
     padding: 0;
     width: 70%;
+    z-index: 1;
 }
 #navbar li {
     float: left;
@@ -29,10 +30,10 @@
     text-decoration: none;
 }
 #navbar .active {
-    background-color: #82828F;
+    background-color: #77414A;
 }
 #navbar li a:hover:not(.active), .dropdown:hover .dropdown-button {
-    background-color: #101012;
+    background-color: #A82337;
 }
 
 #navbar .dropdown-content {
