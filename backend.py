@@ -34,7 +34,7 @@ class User:
     def knn(self, person, search):
         sum = 0
         cnt = 0
-        dis = 0.75
+        dis = 1.00
         for arr in search:
             temp = arr[:4]-person
             mag = np.sqrt(temp.dot(temp))
@@ -49,9 +49,9 @@ class User:
             sz = len(self.databaseW[j[2]])
             a, b, e, s, r = self.databaseW[j[2]][sz-1]
             val = self.knn( (E.personE, self.personW, e, s) , self.databaseE[j[2]])
-            res.append((val, j[0]))
+            res.append((val, j))
         res.sort()
-        return [x[1] for x in res]
+        return res[::-1]
     def recommendWorker(self, jobs):
         res = []
         for j in jobs:
@@ -59,9 +59,9 @@ class User:
             sz = len(self.databaseE[j[2]])
             a, b, e, s, r = self.databaseE[j[2]][sz-1]
             val = self.knn( (self.personE, W.personW, e, s) , self.databaseW[j[2]])
-            res.append((val, j[1]))
+            res.append((val, j))
         res.sort()
-        return [x[1] for x in res]
+        return res[::-1]
 
 def surveyWorker(username):
     #get data
@@ -93,11 +93,11 @@ def surveyWorker(username):
 
 users['gtangg12'] = User('gtangg12')
 users['alex105'] = User('alex105')
-users['jjj7'] = User('jjj7')
+users['temp'] = User('temp')
 surveyWorker('gtangg12')
 surveyWorker('alex105')
-job = ('gtangg12', 'alex105', 'Gardening')
-job2 = ('gtangg12', 'jjj7', 'Gardening')
+job = ('gtangg12', 'alex105', 'Moving')
+job2 = ('alex105', 'gtangg12', 'Gardening')
 job3 = ('gtangg12', 'alex105', 'Snow_Shoveling')
 print(users['gtangg12'].recommendWorker([job, job2]))
 print(users['alex105'].recommendJob([job, job2, job3]))

@@ -18,14 +18,92 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link rel="stylesheet" type="text/css" href="css/twoscroll.css">
         <link rel="stylesheet" type="text/css" href="css/eventbox.css">
+        <link rel="stylesheet" type="text/css" href="css/popup.css">
     </head>
     <body>
         {{> navBar active='work'}}
+        <div class="popup-background" id="survey-worker">
+		    <div class="popup">
+		        <form>
+		        Enjoyment
+		        <!-- http://www.webcodingtech.com/javascript/spinner.php -->
+		        <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                <td rowspan="2"><input type="text" name="enj" value="2.5" style="width:50px;height:23px;font-weight:bold;" /></td>
+                <td><input type="button" value=" /\ " onclick="if(this.form.enj.value<4.4){this.form.enj.value=parseFloat(this.form.enj.value)+ 0.5;}" style="font-size:7px;margin:0;padding:0;width:20px;height:13px;" ></td>
+                </tr>
+                <tr>
+                <td><input type=button value=" \/ " onclick="if(this.form.enj.value>0.6){this.form.enj.value=parseFloat(this.form.enj.value)-0.5;}" style="font-size:7px;margin:0;padding:0;width:20px;height:12px;" ></td>
+                </tr>
+                </table>
+                Personality of employer
+                <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                <td rowspan="2"><input type="text" name="pers" value="2.5" style="width:50px;height:23px;font-weight:bold;" /></td>
+                <td><input type="button" value=" /\ " onclick="if(this.form.pers.value<4.6){this.form.pers.value=parseFloat(this.form.pers.value)+0.5;}" style="font-size:7px;margin:0;padding:0;width:20px;height:13px;" ></td>
+                </tr>
+                <tr>
+                <td><input type=button value=" \/ " onclick="if(this.form.pers.value>0.4){this.form.pers.value=parseFloat(this.form.pers.value)-0.5;}" style="font-size:7px;margin:0;padding:0;width:20px;height:12px;" ></td>
+                </tr>
+                </table>
+		        <input type="checkbox" id="recommend" onclick="myFunction()"> I recommend this job
+                <p id="text" style="display:none">Checkbox is CHECKED!</p>
+                </form>
+                <button onclick="myFunction()">Click me</button>
+            </div>
+        </div>
         <div id="left">
-            <div id="chosen"></div>
+            <div id="left2">
+                <div id="scrooge_mcduck" class="eventbox">
+                    <image src="imgs/tasks/snow.jpg" height=150>
+                        <div>
+                            <strong>Snow shoveling</strong>
+                            for
+                            <strong>Scrooge Mcduck</strong>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+                <div id="taylor_swift" class="eventbox">
+                    <image src="imgs/tasks/garden.jpg" height=150>
+                        <div>
+                            <strong>Gardening</strong>
+                            for
+                            <strong>Taylor Swift</strong>
+                        <p>No description.</p>
+                    </div>
+                </div>
+                <div id="andrew_ng" class="eventbox">
+                    <image src="imgs/tasks/mowing.jpg" height=150>
+                        <div>
+                            <strong>Lawn Mowing</strong>
+                            for
+                            <strong>Andrew Ng</strong>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+                <div id="george_tang" class="eventbox">
+                    <image src="imgs/tasks/snow.jpg" height=150>
+                        <div>
+                            <strong>Snow shoveling</strong>
+                            for
+                            <strong>George Tang</strong>
+                        <p>The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. Line up at the start. The running speed starts slowly, but gets faster each minute after you hear this signal. [beep] A single lap should be completed each time you hear this sound. [ding] Remember to run in a straight line, and run as long as possible. The second time you fail to complete a lap before the sound, your test is over. The test will begin on the word start. On your mark, get ready, start.</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="right">
-            <div id="history"></div>
+            <div id="right2">
+                <div class="eventbox">
+                    <image src="imgs/tasks/snow.jpg" height=150>
+                        <div>
+                            <strong>Snow shoveling</strong>
+                            for
+                            <strong>Taylor Swift</strong>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

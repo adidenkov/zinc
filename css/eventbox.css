@@ -1,0 +1,25 @@
+.eventbox {
+    display: flex;
+    box-sizing: border-box;
+    margin: 15px 0;
+    padding: 15px;
+    width: 95%; 
+    
+    max-height: 200px;
+    overflow: hidden;
+    
+    border: 2px solid black;
+}
+
+.eventbox:target {
+    border: 5px solid blue;
+}
+
+.eventbox image, .eventbox div {
+    margin: 15px;
+    overflow: hidden;
+}
+
+.eventbox p {
+    font-size: 16px;
+}
