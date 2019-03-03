@@ -1,0 +1,18 @@
+<!--Stylizing navbar with handlebars: https://blog.fossasia.org/using-partials-in-handlebars-and-reusing-code/-->
+<style navbar>@import "css/navbar.css";</style>
+<ul id="navbar">
+    <li><a href={{#ifCond active 'map'}}"javascript:void(0);" class="active"{{else}}"."{{/ifCond}}>Map</a></li>
+    <li><a href={{#ifCond active 'work'}}"javascript:void(0);" class="active"{{else}}"work"{{/ifCond}}>Work</a></li>
+    <li><a href={{#ifCond active 'employ'}}"javascript:void(0);" class="active"{{else}}"employ"{{/ifCond}}>Employ</a></li>
+
+    {{#if name}}
+        <li class="dropdown" style="float: right;">
+            <a href={{#ifCond active 'profile'}}"javascript:void(0);" class="active"{{else}}"profile"{{/ifCond}} class="dropdown-button">Profile</a>
+            <div class="dropdown-content">
+                <a href="logout">Log out</a>
+            </div>
+        </li>
+    {{else}}
+        <li style="float: right;"><a href={{#ifCond active 'profile'}}"javascript:void(0);" class="active"{{else}}"profile"{{/ifCond}}>Log in</a></li>
+    {{/if}}
+</ul>

@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:800");
+
+/* CSS needed to create a navbar: https://www.w3schools.com/css/css_navbar.asp */
+#navbar {
+    list-style-type: none;
+    background-color: #DB203C;
+    box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.2);
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    margin: 0 15%;
+    padding: 0;
+    width: 70%;
+}
+#navbar li {
+    float: left;
+    min-width: 110px;
+}
+#navbar li a {
+    display: block;
+    padding: 14px 24px;
+    text-align: center;
+    
+    font-family: 'Raleway';
+    font-size: 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#navbar .active {
+    background-color: #82828F;
+}
+#navbar li a:hover:not(.active), .dropdown:hover .dropdown-button {
+    background-color: #101012;
+}
+
+#navbar .dropdown-content {
+    position: absolute;
+    display: none;
+    
+    background-color: #404047;
+    min-width: 110px;
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.2);
+    
+    z-index: 1;
+}
+#navbar .dropdown-content a {
+    text-align: left;
+}
+/* Makes the dropdown menu appear on hover */
+#navbar .dropdown:hover .dropdown-content {
+    display: block;
+}

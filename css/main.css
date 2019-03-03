@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:800|Rubik+Mono+One");
+
+h1 {
+    font-family: 'Rubik Mono One';
+    font-size: 3em;
+    color: #C3073F;
+    text-shadow: 1.5px 2px #950740, -1.5px -2px #EC095A;
+    letter-spacing: 1px;
+}
+h2,h3,h4,h5,h6 {
+    color: #FFFFFF;
+}
+a:visited {
+    color: #7A1F32;
+}
+a {
+    color: #C3073F;
+    text-decoration: none;
+}
+body {
+    background-color: #FFDBE0;
+    font-family: 'Raleway';
+    font-size: 18px;
+    color: #6B6B6D;
+    
+    margin: 5% 15% 5% 15%;
+}
+strong {
+    color: #FFFFFF;
+}
+input, textarea {
+    background-color: #82828F;
+    font-family: 'Montserrat';
+    color: #303035;
+    
+    padding: 3px 6px;
+    margin: 3px 3px;
+    
+    border-color: #A0A0B0;
+    
+    resize: none;
+}
+input {
+    cursor: pointer;
+}
+textarea {
+    cursor: default;
+}
