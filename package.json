@@ -23,7 +23,10 @@
   },
   "homepage": "https://github.com/adidenkov/zinc#readme",
   "dependencies": {
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "firebase": "^5.8.5",
+    "firebaseui": "^3.5.2",
     "fs": "0.0.1-security",
     "hbs": "^4.0.3",
     "path": "^0.12.7"

@@ -3,11 +3,14 @@
 
 // -------------- load packages -------------- //
 
-var express = require('express');
-var fs = require('fs');
-var hbs = require('hbs');
-var path = require('path');
-var app = express();
+const express = require('express');
+const dotenv = require('dotenv');
+const firebase = require('firebase');
+const firebaseui = require('firebaseui');
+const fs = require('fs');
+const hbs = require('hbs');
+const path = require('path');
+const app = express();
 
 
 // -------------- express initialization -------------- //
@@ -22,6 +25,22 @@ app.use('/css', express.static(path.join(__dirname, 'css')));
 app.use('/imgs', express.static(path.join(__dirname, 'imgs')));
 
 app.use(express.static(path.join(__dirname, 'shared')));
+
+// Initialize Firebase
+var config = {
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.API_URL + ".firebaseapp.com",
+    databaseURL: "https://" + process.env.API_URL + ".firebaseio.com",
+    storageBucket: process.env.API_URL + ".appspot.com",
+};
+firebase.initializeApp(config);
+
+ui.start('#firebaseui-auth-container', {
+    signInOptions: [
+        // List of OAuth providers supported
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID
+    ]
+});
 
 
 // -------------- global variables -------------- //
