@@ -1,39 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
-        
         <!-- Firebase App is always required and must be first -->
         <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-app.js"></script>
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
         
         <!-- Add additional services that you want to use -->
         <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-database.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-firestore.js"></script>
         
-        <script>
-            var config = {
-                apiKey: "AIzaSyCtXNOTZ3sijhthix2zi3-4xBXrS19tR_c",    // oof not hidden
-                authDomain: "zinc-e9f9c.firebaseapp.com",
-                databaseURL: "https://zinc-e9f9c.firebaseio.com",
-                projectId: "zinc-e9f9c",
-                storageBucket: "zinc-e9f9c.appspot.com",
-                messagingSenderId: "99803564144",
-            };
-            firebase.initializeApp(config);
-        </script>
+        <script src="js/oauth.js"></script>
         
         <!-- By Cezary Lopacinski: https://www.iconfinder.com/icons/1159630/shovel_spade_icon -->
         <link rel="icon" href="imgs/icons/shovel.png">
         <title>Zinc - Profile</title>
         
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/popup.css">
+        <link rel="stylesheet" type="text/css" href="css/profile.css">
     </head>
     <body>
         {{> navBar active='profile'}}
-        <div id="firebaseui-auth-container"></div>
-        <div id="loader">Loading...</div>
-        
-        <script src="js/profile.js"></script>
+        <div class="popup-background" id="login">
+		    <div class="popup">
+                <div id="firebaseui-auth-container"></div>
+                <div id="loader">Loading...</div>
+            </div>
+        </div>
+        <image src="imgs/unknown.jpg" width=300>
     </body>
 </html>
