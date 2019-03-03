@@ -38,7 +38,7 @@
     background-color: #FFB7C1;
 }
 
-#chosen, #history {
+#left2, #right2 {
     position: absolute;
     top: 12%;
     bottom: 5%;

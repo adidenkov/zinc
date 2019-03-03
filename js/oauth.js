@@ -41,6 +41,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     } else {
         // User is signed out.
         console.log("No login");
-        window.location = "#login";
+        window.location = "profile#login";
     }
 });
